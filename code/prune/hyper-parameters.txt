@@ -1,0 +1,2 @@
+Games:
+sh prune.sh games SASRec 0.3 50 log 0
