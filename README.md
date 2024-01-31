@@ -1,9 +1,10 @@
 # Data Pruning for Efficient LLM-based Recommendation
 :bulb: This is the pytorch implementation of our paper 
-> [Data Pruning for Efficient LLM-based Recommendation]
+> Data Pruning for Efficient LLM-based Recommendation
 
 ## Environment
 - Anaconda 3 
+
 Install the environment with the ``.yaml`` file and run
 ```
 conda env create -f DEALRec.yaml
