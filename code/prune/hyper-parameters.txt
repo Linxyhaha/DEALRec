@@ -1,2 +1,8 @@
 Games:
 sh prune.sh games SASRec 0.3 50 log 0
+
+Book:
+sh prune.sh book SASRec 1.0 50 log 0
+
+MicroLens-50K:
+sh prune.sh microlens-50k SASRec 1.0 50 log 0
