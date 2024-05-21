@@ -1,6 +1,7 @@
 # Data Pruning for Efficient LLM-based Recommendation
 :bulb: This is the pytorch implementation of our paper 
 > Data Pruning for Efficient LLM-based Recommendation
+
 > Xinyu Lin, Wenjie Wang, Yongqi Li, Shuo Yang, Fuli Feng, Yinwei Wei, Tat-Seng Chua
 
 ## Environment
