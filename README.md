@@ -33,7 +33,7 @@ sh prune.sh <data_name> <surrogate_model_name> <lamda> <group_number> <log_name>
 :star2: The surrogate model implemented here is SASRec. But it is highlighted that DEALRec is applicable to any other surrogate models, e.g., DCRec (refer to Section 4.3.2).
 
 ### :large_blue_circle: Few-shot Fine-tuning
-Fine-tune LLM-based recommender model (BIGRec) with few-shot samples obtained from pruning process.
+Fine-tune LLM-based recommender model ([BIGRec](https://github.com/SAI990323/Grounding4Rec)) with few-shot samples obtained from pruning process.
 The code for fine-tuning is in 'code/finetune/'. 
 Fine-tune BIGRec with few-shot samples and get the results by running
 ```
@@ -51,3 +51,10 @@ sh prune.sh games SASRec 0.3 50 log 0
 cd ./code/finetune/
 sh finetune.sh games
 ```
+
+### Evaluation
+The codes and running scripts for evaluation are in 'code/finetune/data/' folder. 
+
+## License
+
+NUS © [NExT++](https://www.nextcenter.org/)
