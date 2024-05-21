@@ -105,4 +105,4 @@ def get_influence_score(args, trainer):
         
     influence_score = torch.tensor(influence_score)
 
-    return influence_score
+    return influence_score.cpu()

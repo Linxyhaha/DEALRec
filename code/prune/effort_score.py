@@ -45,8 +45,8 @@ def get_effort_score(args):
     lora_dropout = args.lora_dropout
     lora_target_modules = ["q_proj","v_proj",]
     # other hyperparams
-    group_by_length = False,  # faster, but produces an odd training loss curve
-    resume_from_checkpoint: str = None,  # either training checkpoint or final adapter
+    group_by_length = False  # faster, but produces an odd training loss curve
+    resume_from_checkpoint = args.resume_from_checkpoint  # either training checkpoint or final adapter
     
     assert (base_model), "Please specify a --base_model, e.g. --base_model='decapoda-research/llama-7b-hf'"
     gradient_accumulation_steps = 1
@@ -165,6 +165,7 @@ def get_effort_score(args):
             logging_strategy="no",
             optim="adamw_torch",
             save_strategy="no",
+            output_dir="./models/",
             ddp_find_unused_parameters=False if ddp else None,
             group_by_length=group_by_length,
             report_to=None,
@@ -198,4 +199,4 @@ def get_effort_score(args):
     all_gradients = torch.cat([_[0].unsqueeze(0) for _ in gradients], dim=0)
     effort_scores = torch.norm(all_gradients, dim=1)
 
-    return effort_scores
+    return effort_scores.cpu()

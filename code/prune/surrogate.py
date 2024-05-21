@@ -108,9 +108,9 @@ def train(args):
                     os.mkdir(args.output_dir)
                 torch.save(model,args.checkpoint_path)
 
-    print('==='*18)
-    print("End. Best Epoch {:03d} ".format(best_epoch))
-    print_results(None, best_results, best_test_results)
+        print('==='*18)
+        print("End. Best Epoch {:03d} ".format(best_epoch))
+        print_results(None, best_results, best_test_results)
 
     # load the best model for data pruning
     trainer.load(args.checkpoint_path)
