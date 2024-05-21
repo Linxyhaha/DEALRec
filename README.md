@@ -1,8 +1,8 @@
 # Data-efficient Fine-tuning for LLM-based Recommendation
 :bulb: This is the pytorch implementation of our paper 
-> Data-efficient Fine-tuning for LLM-based Recommendation
+> [Data-efficient Fine-tuning for LLM-based Recommendation](https://arxiv.org/pdf/2401.17197)
 
-> Xinyu Lin, Wenjie Wang, Yongqi Li, Shuo Yang, Fuli Feng, Yinwei Wei, Tat-Seng Chua
+> [Xinyu Lin](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=0O_bs3UAAAAJ&sortby=pubdate), [Wenjie Wang](https://wenjiewwj.github.io/), [Yongqi Li](https://liyongqi67.github.io/), [Shuo Yang](https://shuoyang-1998.github.io/), [Fuli Feng](https://fulifeng.github.io/), [Yinwei Wei](https://weiyinwei.github.io/), [Tat-Seng Chua](https://www.chuatatseng.com/)
 
 ## Environment
 - Anaconda 3 
