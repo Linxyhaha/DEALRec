@@ -56,6 +56,17 @@ sh finetune.sh games
 ### Evaluation
 The codes and running scripts for evaluation are in 'code/finetune/data/' folder. 
 
+## Citation
+If you find our work is useful for your research, please consider citing: 
+```
+@inproceedings{lin2024data,
+  title={Data-efficient Fine-tuning for LLM-based Recommendation},
+  author={Xinyu Lin, Wenjie Wang, Yongqi Li, Shuo Yang, Fuli Feng, Yinwei Wei},
+  booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
+  year={2024}
+}
+```
+
 ## License
 
 NUS © [NExT++](https://www.nextcenter.org/)
