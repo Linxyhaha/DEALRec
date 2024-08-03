@@ -61,7 +61,7 @@ If you find our work is useful for your research, please consider citing:
 ```
 @inproceedings{lin2024data,
   title={Data-efficient Fine-tuning for LLM-based Recommendation},
-  author={Xinyu Lin, Wenjie Wang, Yongqi Li, Shuo Yang, Fuli Feng, Yinwei Wei},
+  author={Lin, Xinyu and Wenjie Wang and Li Yongqi and Yang, Shuo and Feng, Fuli and Wei, Yinwei and Chua, Tat-Seng},
   booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
   year={2024}
 }
