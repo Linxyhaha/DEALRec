@@ -74,6 +74,10 @@ def gen_fewshot(
         if view=="title":
             if dataset=="games":
                 return f"The user has purchased the following game products before, with titles as: {history_list}"
+            elif dataset=="book":
+                return f"The user has purchased the following books before, with titles as: {history_list}"
+            elif dataset=="microlens-50k":
+                return f"The user has watched the following micro-videos before, with titles as: {history_list}"
 
     title_maps = read_npy(input_dir+'/title_maps.npy').item()
     sequential_train = read_txt(input_dir+'/sequential_train.txt')
@@ -104,7 +108,11 @@ def gen_fewshot(
 
     if dataset == "games":
         instruction = "Given the game products that the user purchased before, please recommend a new game product that the user likes to the user."
-    
+    elif dataset == "book":
+        instruction = "Given the books that the user purchased before, please recommend a new book that the user likes to the user."
+    elif dataset == "microlens-50k":
+        instruction = "Given the micro-videos that the user watched before, please recommend a new micro-video that the user likes to the user."
+
     datapoints = []
     test_cnt = 0
     for idx, sample in tqdm(enumerate(fewshot_train)):
