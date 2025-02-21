@@ -10,16 +10,10 @@ import ipdb
 import argparse
 parse = argparse.ArgumentParser()
 parse.add_argument("--n_fewshot", type=str, default="1024")
-parse.add_argument("--filename", type=str, default="")
+parse.add_argument("--filename", type=str, default="", help="the filename of the generation results under the ../../results folder")
 parse.add_argument("--dataset", type=str, default="games")
 
 args = parse.parse_args()
-
-path = []
-for root, dirs, files in os.walk(args.input_dir):
-    for name in files:
-            path.append(os.path.join(args.input_dir, name))
-# print(path)
 
 if torch.cuda.is_available():
     device = "cuda"

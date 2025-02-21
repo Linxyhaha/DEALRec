@@ -12,6 +12,12 @@ Install the environment with the ``.yaml`` file and run
 conda env create -f DEALRec.yaml
 ```
 
+**Potential issue for peft installation**: Please check your peft version after environment installation. If it is not properly installed, you may run the following commands (refer to [Issue](https://github.com/tloen/alpaca-lora/issues/293) for details)
+```
+pip uninstall peft -y
+pip install git+https://github.com/huggingface/peft.git@e536616888d51b453ed354a6f1e243fecb02ea08
+```
+
 ## Usage
 
 ### Data
@@ -54,15 +60,16 @@ sh finetune.sh games
 ```
 
 ### Evaluation
-The codes and running scripts for evaluation are in 'code/finetune/data/' folder. 
+The codes and running scripts for evaluation are in 'code/finetune/data/' folder. You should first run **inference_ddp.py** to save the generation results from BIGRec, then evaluate the results via **evaluate.sh**.
 
 ## Citation
 If you find our work is useful for your research, please consider citing: 
 ```
 @inproceedings{lin2024data,
   title={Data-efficient Fine-tuning for LLM-based Recommendation},
-  author={Lin, Xinyu and Wenjie Wang and Li Yongqi and Yang, Shuo and Feng, Fuli and Wei, Yinwei and Chua, Tat-Seng},
-  booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
+  author={Lin, Xinyu and Wang, Wenjie and Li, Yongqi and Yang, Shuo and Feng, Fuli and Wei, Yinwei and Chua, Tat-Seng},
+  booktitle={SIGIR},
+  pages={365--374},
   year={2024}
 }
 ```
